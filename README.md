@@ -94,12 +94,6 @@ src/
 - Enhance permission granularity
 - Implement comprehensive logging
 
-## Contributing
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
-
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
 ## Acknowledgments
 - VRV Security for the internship assignment
 - Open-source community for invaluable tools and libraries
