@@ -41,7 +41,7 @@ This is a Role-Based Access Control (RBAC) management dashboard developed for VR
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/rbac-dashboard.git
+git clone https://github.com/yourusername/RBAC.git
 cd rbac-dashboard
 ```
 
