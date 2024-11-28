@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { mockUsers } from '../data/mockUsers';
+import { mockUsers, mockRoles } from '../data/mockUsers';
 import toast from 'react-hot-toast';
 
 export const createUser = createAsyncThunk(
@@ -18,7 +18,7 @@ export const createUser = createAsyncThunk(
 
       return newUser;
     } catch (error) {
-      return rejectWithValue(error.response.data);
+      return rejectWithValue(error.response?.data || 'An error occurred');
     }
   }
 );
@@ -36,7 +36,7 @@ export const updateUser = createAsyncThunk(
         updatedAt: new Date().toISOString()
       };
     } catch (error) {
-      return rejectWithValue(error.response.data);
+      return rejectWithValue(error.response?.data || 'An error occurred');
     }
   }
 );
@@ -47,7 +47,7 @@ export const deleteUser = createAsyncThunk(
     try {
       return userId;
     } catch (error) {
-      return rejectWithValue(error.response.data);
+      return rejectWithValue(error.response?.data || 'An error occurred');
     }
   }
 );
@@ -55,7 +55,7 @@ export const deleteUser = createAsyncThunk(
 const usersSlice = createSlice({
   name: 'users',
   initialState: {
-    users: mockUsers,
+    users: mockUsers, // Use imported mockUsers directly
     selectedUser: null,
     isModalOpen: false,
     status: 'idle',

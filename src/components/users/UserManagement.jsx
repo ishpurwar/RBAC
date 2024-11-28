@@ -26,7 +26,6 @@ const UserManagement = () => {
     reset, 
     formState: { errors } 
   } = useForm();
-
   const onSubmit = (data) => {
     if (selectedUser) {
       dispatch(updateUser({ ...data, id: selectedUser.id }));
@@ -76,7 +75,7 @@ const UserManagement = () => {
             </tr>
           </thead>
           <tbody>
-            {mockUsers.map((user) => (
+            {users.map((user) => (
               <tr 
                 key={user.id} 
                 className="border-b hover:bg-gray-100 transition-colors"
